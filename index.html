@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-animate.min.js"></script>
+    <script src="libs/angular-animate-sequence.js"></script>
+    <script src="libs/angular-animate-stylers.js"></script>
+    <script src="libs/material-design.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/material-design.min.css">
+
     <script src="app.js"></script>
 </head>
 
@@ -17,9 +24,9 @@
         <input type="text" ng-model="yt.videoid">
 
         <!-- Player control buttons -->
-        <button ng-click="sendControlEvent(YT_event.PLAY)">Send Play</button>
-        <button ng-click="sendControlEvent(YT_event.PAUSE)">Send Pause</button>
-        <button ng-click="sendControlEvent(YT_event.STOP)">Send Stop</button>
+        <button class="material-button material-button-raised material-button-colored" ng-click="sendControlEvent(YT_event.PLAY)">Send Play</button>
+        <button class="material-button material-button-raised material-button-colored" ng-click="sendControlEvent(YT_event.PAUSE)">Send Pause</button>
+        <button class="material-button material-button-raised material-button-colored" ng-click="sendControlEvent(YT_event.STOP)">Send Stop</button>
 
         <!-- simple player status display -->
         <p>Player status is: {{yt.playerStatus}}</p>
